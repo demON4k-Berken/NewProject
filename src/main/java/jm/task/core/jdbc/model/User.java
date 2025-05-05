@@ -12,7 +12,7 @@ public class User {
     @Column
     private String name;
 
-    @Column
+    @Column(name = "last_name")
     private String lastName;
 
     @Column
@@ -58,5 +58,13 @@ public class User {
 
     public void setAge(Byte age) {
         this.age = age;
+    }
+
+    @Override
+    public String toString() {
+        return "id: " + id +
+                "\t Имя: " + name +
+                "\t Фамилия: " + lastName +
+                "\t Возраст: " + age;
     }
 }
